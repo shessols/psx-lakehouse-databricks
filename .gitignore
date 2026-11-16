@@ -1,0 +1,7 @@
+local/
+__pycache__/
+.pytest_cache/
+.databricks/
+spark-warehouse/
+metastore_db/
+*.log

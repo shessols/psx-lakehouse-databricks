@@ -1,0 +1,22 @@
+bundle:
+  name: psx-lakehouse
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    description: Unity Catalog catalog
+    default: workspace
+  schema:
+    description: Schema for all PSX tables
+    default: psx
+
+targets:
+  dev:
+    mode: development
+    default: true
+  prod:
+    mode: production
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
